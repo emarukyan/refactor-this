@@ -4,6 +4,10 @@
 // But doSomeCheck is a heavy function, and if we call it every sec, system will hang
 // We want to call that function not earlier than 10 (queueCountCheckMinutes) minutes
 //
+// THE PROBLEM
+// After runinng this for a day, we found that doSomeCheck functions is not beinng called 
+// properly, and sometimes it's not being called for 7 hours in a raw.
+//
 // NOW TASK
 //
 // Please make sure that logic is correct, and if it is not. please tell what exactly.
