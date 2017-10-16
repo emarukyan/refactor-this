@@ -13,3 +13,9 @@ const getTheMoneyEarnedByTheAgent = (coupons) => {
   }
   return earnedMoney
 }
+
+const REFACTOR_getTheMoneyEarnedByTheAgent = (coupons = []) => {
+  return coupons.reduce((prev, cur) => {
+    return prev + cur.TotalInvoicePrice / 100 * config.salesAgentRevenuePercent
+  }, 0).toFixed(2)
+}
